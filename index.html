@@ -7,6 +7,18 @@
 		<h1>Generate a</h1>
 		<h1 class="random-text">random password</h1>
 		<p>Never use an insecure password again.</p>
+        <div class="generateOption">
+            <div class="rangepassword">
+                <button class="btn-range" onclick="passRangeDecrement()">-</button>
+                <p id="passRangeEl">15</p>
+                <button class="btn-range" onclick="passRangeIncrement()">+</button>
+            </div>
+            <input type="checkbox" onclick="isNumber()" id="isNumberPassword" class="checkboxpass">
+            <label for="isNumberPassword" class="checkboxLabel">Number</label>
+            
+            <input type="checkbox" id="isSymbols" class="checkboxpass">
+            <label for="isSymbols" class="checkboxLabel">Symbols</label>
+        </div>
 		<button onclick="password()" class="btn generatePassword">Generate passwords</button>
 		<div class="copy-password">
 			<input 

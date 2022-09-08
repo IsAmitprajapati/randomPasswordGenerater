@@ -11,9 +11,14 @@ body {
     align-items: center;
 }
 .container{
-    width: 90%;
+    max-width: 450px;
     height: 80%;
     margin: auto;
+}
+@media all and (max-width:500px){
+    .container{
+        margin: 1em;
+    }
 }
 h1{
     margin:0;
@@ -39,7 +44,11 @@ p{
     background:#4ADF86;
     color:#ffffff;
     margin: 2em 0;
+    cursor: pointer;
     
+}
+.generatePassword:hover,{
+    background:#4AD189;
 }
 .passwordShow{
     color:#4ADF86;
@@ -48,9 +57,51 @@ p{
     min-width: 150px;
     height: 30px;
     margin-right: 1em;
-    padding: 0.4em 0em; 
+    padding: 0.4em 0.2em; 
     text-align: center;
     margin-bottom: 0.4em;
+    overflow: hidden;
+    border: none;
+    outline: none;
 }
 
+/*===================================
+    generateOption
+====================================*/
+.generateOption{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    overflow: hidden;
+    
+}
+.rangepassword{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    overflow: hidden;
+    border-radius: 50px;
+    width: 70px;
+    height: 25px;
+    justify-content: space-between;
+    border:1px solid #273549;
+}
 
+.btn-range{
+    border:none;
+    background: #4ADF86;
+    height:25px;
+    font-size: 1em;
+    color:#fff;
+}
+.btn-range:hover{
+    background: #4AD189;
+}
+.checkboxpass{
+    margin-left: 1em;
+    color: #4AD189;
+}
+.checkboxLabel{
+    margin-left:0.5em;
+    color:#fff;
+}

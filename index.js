@@ -1,5 +1,29 @@
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
+//sort the array 
+
+//passRange
+let passRange = 15;
+let passRangeEl = document.getElementById("passRangeEl");
+function  passRangeDecrement(){
+    passRange-=1;
+    passRangeEl.textContent = passRange;
+}
+function passRangeIncrement(){
+    passRange+=1;
+    passRangeEl.textContent = passRange;
+}
+
+//number in password
+let numberEl =document.getElementById("isNumberPassword").checked = true;
+let symbolEl =document.getElementById("isSymbols").checked = true;
+ 
+ function isNumber(){
+     console.log(symbolEl)
+ } 
+
+
+
 let len = characters.length
 let password1El = document.getElementById("password1")
 let password2El = document.getElementById("password2")
@@ -7,7 +31,7 @@ let password2El = document.getElementById("password2")
 //create the password
 function generatedPassword(){
     let password = characters[callRandomWord()] 
-    for(let i = 0 ; i <= 15 ; i++){
+    for(let i = 0 ; i <= passRange ; i++){
         password += characters[callRandomWord()] 
     }
     return password
